@@ -1,0 +1,12 @@
+{
+  "name": "multi-agent-delegator",
+  "description": "Delegate bounded coding work from Claude Code to interactive Codex and Antigravity sessions running in visible cmux terminal panes, while Claude retains architecture, coordination, review, and integration.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aditya Karnam",
+    "url": "https://github.com/adityak74"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/adityak74/my-claude-skills",
+  "keywords": ["cmux", "codex", "antigravity", "multi-agent", "delegation", "worktree", "parallel-agents"]
+}

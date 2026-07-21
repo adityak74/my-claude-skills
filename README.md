@@ -1,36 +1,38 @@
 # my-claude-skills
 
-A collection of custom [Claude Code](https://claude.com/claude-code) skills.
+A collection of custom [Claude Code](https://claude.com/claude-code) skills,
+distributed as a Claude Code plugin marketplace.
 
-Each skill lives in its own directory containing a `SKILL.md` file with YAML
-frontmatter (`name`, `description`) followed by instructions Claude follows
-when the skill is invoked.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Installation
 
-Copy (or symlink) a skill's directory into your Claude Code skills folder:
+Add this repo as a plugin marketplace, then install the plugin:
 
 ```bash
-cp -r <skill-name> ~/.claude/skills/<skill-name>
+claude plugin marketplace add adityak74/my-claude-skills
+claude plugin install multi-agent-delegator
 ```
 
-Or clone this whole repo into your skills directory:
+Or, inside a Claude Code session, use the slash commands:
 
-```bash
-git clone https://github.com/adityak74/my-claude-skills.git ~/.claude/skills/my-claude-skills
+```text
+/plugin marketplace add adityak74/my-claude-skills
+/plugin install multi-agent-delegator
 ```
 
-Invoke a skill with `/<skill-name>` in Claude Code, or let Claude pick it up
-automatically when its description matches the task at hand.
+Once installed, invoke a skill's trigger command (e.g. `/multi-agent-delegator`)
+and Claude will follow its instructions, or let Claude pick it up automatically
+when its description matches the task at hand.
 
 ## Skills
 
-### [multi-agent-delegator](./multi-agent-delegator/SKILL.md)
+### [multi-agent-delegator](./skills/multi-agent-delegator/SKILL.md)
 
 Delegate bounded coding work from Claude Code to interactive Codex and
-Antigravity sessions running in visible [cmux](https://github.com) terminal
-panes, while the main Claude Code session retains architecture decisions,
-coordination, review, and integration.
+Antigravity sessions running in visible [cmux](https://github.com/manaflow-ai/cmux)
+terminal panes, while the main Claude Code session retains architecture
+decisions, coordination, review, and integration.
 
 Use it when a coding goal can be split into parallelizable, independently
 verifiable chunks (implementation, test authoring, exploration,
@@ -40,7 +42,23 @@ engineer overseeing and merging the results.
 
 **Trigger:** `/multi-agent-delegator <goal>`
 
+## Repository layout
+
+```text
+.claude-plugin/
+  marketplace.json   # marketplace manifest listing all plugins in this repo
+  plugin.json         # manifest for the multi-agent-delegator plugin
+skills/
+  multi-agent-delegator/
+    SKILL.md          # skill definition (frontmatter + instructions)
+```
+
 ## Contributing
 
-New skills should follow the same layout: a directory named after the
-skill containing a `SKILL.md` with `name` and `description` frontmatter.
+New skills should live under `skills/<skill-name>/SKILL.md`, with `name` and
+`description` frontmatter. Register any new plugin in
+`.claude-plugin/marketplace.json`.
+
+## License
+
+[MIT](LICENSE)

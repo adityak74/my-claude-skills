@@ -1,0 +1,19 @@
+{
+  "name": "my-claude-skills",
+  "owner": {
+    "name": "Aditya Karnam",
+    "url": "https://github.com/adityak74"
+  },
+  "plugins": [
+    {
+      "name": "multi-agent-delegator",
+      "source": "./",
+      "description": "Delegate bounded coding work from Claude Code to interactive Codex and Antigravity sessions running in visible cmux terminal panes, while Claude retains architecture, coordination, review, and integration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Aditya Karnam",
+        "url": "https://github.com/adityak74"
+      }
+    }
+  ]
+}
