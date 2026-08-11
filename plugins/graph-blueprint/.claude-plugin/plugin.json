@@ -1,0 +1,12 @@
+{
+  "name": "graph-blueprint",
+  "description": "Run broad tasks as a graph: define the goal, split it, fan out parallel workers on different angles, verify their findings in fresh context, merge what survives, and synthesize one clear report.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aditya Karnam",
+    "url": "https://github.com/adityak74"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/adityak74/my-claude-skills",
+  "keywords": ["multi-agent", "parallel-agents", "fan-out", "verification", "research", "audit", "orchestration"]
+}
