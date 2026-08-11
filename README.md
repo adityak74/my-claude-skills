@@ -12,6 +12,7 @@ Add this repo as a plugin marketplace, then install the plugin:
 ```bash
 claude plugin marketplace add adityak74/my-claude-skills
 claude plugin install multi-agent-delegator
+claude plugin install graph-blueprint
 ```
 
 Or, inside a Claude Code session, use the slash commands:
@@ -19,6 +20,7 @@ Or, inside a Claude Code session, use the slash commands:
 ```text
 /plugin marketplace add adityak74/my-claude-skills
 /plugin install multi-agent-delegator
+/plugin install graph-blueprint
 ```
 
 Once installed, invoke a skill's trigger command (e.g. `/multi-agent-delegator`)
@@ -42,22 +44,48 @@ engineer overseeing and merging the results.
 
 **Trigger:** `/multi-agent-delegator <goal>`
 
+### [graph-blueprint](./plugins/graph-blueprint/skills/graph-blueprint/SKILL.md)
+
+Run a broad task as a graph — nodes do the work, edges carry the results:
+define the goal, split it into independent pieces, fan out parallel workers on
+different angles (research, compare, check, find gaps), verify every finding in
+a fresh context that never saw the worker's reasoning, merge what survives, and
+synthesize one clear, actionable report.
+
+Use it when a single pass would miss things: research, audits, code or design
+reviews, comparisons, migrations, and any "be thorough" request where
+unverified worker output would otherwise leak straight into the answer.
+
+**Trigger:** `/graph-blueprint <goal>`
+
 ## Repository layout
 
 ```text
 .claude-plugin/
-  marketplace.json   # marketplace manifest listing all plugins in this repo
-  plugin.json         # manifest for the multi-agent-delegator plugin
+  marketplace.json    # marketplace manifest listing all plugins in this repo
+  plugin.json         # manifest for the multi-agent-delegator plugin (root plugin)
 skills/
   multi-agent-delegator/
     SKILL.md          # skill definition (frontmatter + instructions)
+plugins/
+  graph-blueprint/
+    .claude-plugin/
+      plugin.json     # manifest for the graph-blueprint plugin
+    skills/
+      graph-blueprint/
+        SKILL.md
 ```
+
+The `multi-agent-delegator` plugin is sourced from the repo root for backwards
+compatibility; every additional plugin lives in its own `plugins/<name>/`
+directory so it can be installed independently.
 
 ## Contributing
 
-New skills should live under `skills/<skill-name>/SKILL.md`, with `name` and
-`description` frontmatter. Register any new plugin in
-`.claude-plugin/marketplace.json`.
+New skills should live under `plugins/<plugin-name>/skills/<skill-name>/SKILL.md`,
+with `name` and `description` frontmatter, alongside a
+`plugins/<plugin-name>/.claude-plugin/plugin.json` manifest. Register any new
+plugin in `.claude-plugin/marketplace.json`.
 
 ## License
 

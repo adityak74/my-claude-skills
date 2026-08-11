@@ -14,6 +14,16 @@
         "name": "Aditya Karnam",
         "url": "https://github.com/adityak74"
       }
+    },
+    {
+      "name": "graph-blueprint",
+      "source": "./plugins/graph-blueprint",
+      "description": "Run broad tasks as a graph: define the goal, split it, fan out parallel workers on different angles, verify their findings in fresh context, merge what survives, and synthesize one clear report.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Aditya Karnam",
+        "url": "https://github.com/adityak74"
+      }
     }
   ]
 }
