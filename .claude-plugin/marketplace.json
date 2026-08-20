@@ -24,6 +24,16 @@
         "name": "Aditya Karnam",
         "url": "https://github.com/adityak74"
       }
+    },
+    {
+      "name": "mac-dev-workstation",
+      "source": "./plugins/mac-dev-workstation",
+      "description": "Bootstrap a fresh macOS development workstation with Homebrew, shell PATHs, nvm/Node, Python, Rust, Ollama, OrbStack, Slack, and the common CLI tools used in this repo's setup.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Aditya Karnam",
+        "url": "https://github.com/adityak74"
+      }
     }
   ]
 }
