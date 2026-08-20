@@ -1,0 +1,24 @@
+{
+  "name": "mac-dev-workstation",
+  "description": "Bootstrap a fresh macOS development workstation with Homebrew, shell PATHs, nvm/Node, Python, Rust, Ollama, OrbStack, Slack, and the common CLI tools used in this repo's setup.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aditya Karnam",
+    "url": "https://github.com/adityak74"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/adityak74/my-claude-skills",
+  "keywords": ["macos", "workstation", "bootstrap", "homebrew", "nvm", "rustup", "ollama", "orbstack"],
+  "interface": {
+    "displayName": "Mac Dev Workstation",
+    "shortDescription": "Bootstrap a fresh Mac dev setup.",
+    "longDescription": "Install and configure the standard development stack for a freshly formatted macOS machine, including shell PATHs, Node, Python, Rust, Ollama, OrbStack, Slack, and common CLI tools.",
+    "developerName": "Aditya Karnam",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Bootstrap my fresh Mac dev workstation.",
+      "Install the standard development tools on my Mac."
+    ]
+  }
+}

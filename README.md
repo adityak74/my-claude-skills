@@ -13,6 +13,7 @@ Add this repo as a plugin marketplace, then install the plugin:
 claude plugin marketplace add adityak74/my-claude-skills
 claude plugin install multi-agent-delegator
 claude plugin install graph-blueprint
+claude plugin install mac-dev-workstation
 ```
 
 Or, inside a Claude Code session, use the slash commands:
@@ -21,6 +22,7 @@ Or, inside a Claude Code session, use the slash commands:
 /plugin marketplace add adityak74/my-claude-skills
 /plugin install multi-agent-delegator
 /plugin install graph-blueprint
+/plugin install mac-dev-workstation
 ```
 
 Once installed, invoke a skill's trigger command (e.g. `/multi-agent-delegator`)
@@ -58,6 +60,17 @@ unverified worker output would otherwise leak straight into the answer.
 
 **Trigger:** `/graph-blueprint <goal>`
 
+### [mac-dev-workstation](./plugins/mac-dev-workstation/skills/mac-dev-workstation/SKILL.md)
+
+Bootstrap a fresh macOS development workstation with Homebrew, shell PATHs,
+nvm/Node, Python, Rust, Ollama, OrbStack, Slack, and the common CLI tools used
+in this repo's setup.
+
+Use it when a Mac has just been formatted, the dev environment needs to be
+rebuilt from scratch, or a standard workstation stack needs to be restored.
+
+**Trigger:** `/mac-dev-workstation`
+
 ## Repository layout
 
 ```text
@@ -73,6 +86,12 @@ plugins/
       plugin.json     # manifest for the graph-blueprint plugin
     skills/
       graph-blueprint/
+        SKILL.md
+  mac-dev-workstation/
+    .claude-plugin/
+      plugin.json     # manifest for the mac-dev-workstation plugin
+    skills/
+      mac-dev-workstation/
         SKILL.md
 ```
 
