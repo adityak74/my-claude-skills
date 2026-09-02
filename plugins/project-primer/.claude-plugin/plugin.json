@@ -1,0 +1,24 @@
+{
+  "name": "project-primer",
+  "description": "Prime a new repository to open source standards: a top-1% README with a star-history chart, MIT license, contributing and security guidelines, a pull request template, and GitHub repo description, homepage, topics, and labels set via gh api.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aditya Karnam",
+    "url": "https://github.com/adityak74"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/adityak74/my-claude-skills",
+  "keywords": ["readme", "open-source", "github", "gh-cli", "labels", "license", "pull-request-template", "scaffolding"],
+  "interface": {
+    "displayName": "Project Primer",
+    "shortDescription": "Prime a new repo to open source standards.",
+    "longDescription": "Set up a new project the way it should ship on day one: a README that earns a star, MIT license, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, a pull request template, a star-history chart, and GitHub repo description, homepage, topics, and labels configured through gh api.",
+    "developerName": "Aditya Karnam",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Prime this new repo for open source.",
+      "Set up the README, license, labels, and PR template for this project."
+    ]
+  }
+}
