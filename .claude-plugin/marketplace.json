@@ -34,6 +34,16 @@
         "name": "Aditya Karnam",
         "url": "https://github.com/adityak74"
       }
+    },
+    {
+      "name": "project-primer",
+      "source": "./plugins/project-primer",
+      "description": "Prime a new repository to open source standards: a top-1% README with a star-history chart, MIT license, contributing and security guidelines, a pull request template, and GitHub repo description, homepage, topics, and labels set via gh api.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Aditya Karnam",
+        "url": "https://github.com/adityak74"
+      }
     }
   ]
 }

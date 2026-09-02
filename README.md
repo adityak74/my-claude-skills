@@ -14,6 +14,7 @@ claude plugin marketplace add adityak74/my-claude-skills
 claude plugin install multi-agent-delegator
 claude plugin install graph-blueprint
 claude plugin install mac-dev-workstation
+claude plugin install project-primer
 ```
 
 Or, inside a Claude Code session, use the slash commands:
@@ -23,6 +24,7 @@ Or, inside a Claude Code session, use the slash commands:
 /plugin install multi-agent-delegator
 /plugin install graph-blueprint
 /plugin install mac-dev-workstation
+/plugin install project-primer
 ```
 
 Once installed, invoke a skill's trigger command (e.g. `/multi-agent-delegator`)
@@ -71,6 +73,19 @@ rebuilt from scratch, or a standard workstation stack needs to be restored.
 
 **Trigger:** `/mac-dev-workstation`
 
+### [project-primer](./plugins/project-primer/skills/project-primer/SKILL.md)
+
+Prime a new repository to open source standards in one pass: a top-1% README
+with a star-history chart, an MIT license, contributing / code of conduct /
+security guidelines, a pull request template, and the GitHub repo description,
+homepage, topics, and labels configured through `gh api`.
+
+Use it when a repo has just been created or is about to go public, and the
+same day-one setup keeps getting done by hand — empty description, missing
+license, default labels, no PR template, a project website nobody links to.
+
+**Trigger:** `/project-primer`
+
 ## Repository layout
 
 ```text
@@ -92,6 +107,12 @@ plugins/
       plugin.json     # manifest for the mac-dev-workstation plugin
     skills/
       mac-dev-workstation/
+        SKILL.md
+  project-primer/
+    .claude-plugin/
+      plugin.json     # manifest for the project-primer plugin
+    skills/
+      project-primer/
         SKILL.md
 ```
 
